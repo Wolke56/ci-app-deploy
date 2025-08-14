@@ -30,4 +30,4 @@ jobs:
         script: |
           sudo pkill -f server.py || true
           pip3 install -r ~/app/requirements.txt
-          nohup python3 ~/app/server.py &
+          sudo nohup python3 ~/app/server.py &
