@@ -31,5 +31,6 @@ jobs:
           sudo pkill -f server.py || true
           sleep 1
           pip3 install -r /home/ec2-user/app/requirements.txt
-          sudo chmod +x /home/ec2-user/app/*
-          nohup python3 /home/ec2-user/app/server.py &
+          sudo chmod +x ~/app/*
+          nohup python3 ~/app/server.py &
+          disown
