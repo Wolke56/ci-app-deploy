@@ -29,6 +29,6 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           sudo pkill -15 -f server.py || true
-          pip3 install -r ~/app/requirements.txt
+          pip3 install -r /home/ec2-user/app/requirements.txt
           sudo chmod +x /home/ec2-user/app/*
-          nohup python3 ~/app/server.py &
+          nohup python3 /home/ec2-user/app/server.py &
